@@ -1,0 +1,70 @@
+/* 设置 apikey 的表单 */
+.setting {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.setting img {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.form-key {
+  width: 60%;
+  height: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: .625rem;
+  z-index: 2;
+  display: none;
+}
+
+.form-key.active {
+  display: block;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-key .form-item input {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.form-key .form-item label {
+  color: #000;
+}
+
+.form-key .form-item .line {
+  border-color: red;
+}
+
+.form-key .close {
+  font-size: 1.625rem;
+  border-radius: 50%;
+  position: absolute;
+  right: .625rem;
+  cursor: pointer;
+}
+
+.box .btns .confirm {
+  width: 3.75rem;
+  padding: .3125rem;
+  background-color: #5264ae;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1rem;
+}

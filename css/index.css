@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 整体样式 */
+body {
+  display: flex;
+  background-color: #161626;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body.mark {
+  overflow: hidden;
+}
+
+/* 标题样式 */
+.title {
+  width: 12.5rem;
+  color: #fff;
+  text-shadow: .3125rem .3125rem .3125rem rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-top: 1.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* 输入框样式 */
+.form {
+  width: 90%;
+}
+
+.form-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-item {
+  width: 12.5rem;
+  position: relative;
+  margin: 1.5625rem .625rem;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0;
+  border-bottom: .125rem solid #fff;
+  font-size: 1rem;
+  background-color: #161626;
+  color: #fff;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 0;
+  border-bottom: .125rem solid #5264ae;
+  transition: 0.4s ease;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  line-height: 3.125rem;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+input:focus~label,
+input:valid~label {
+  transform: translateY(-30px);
+  font-size: .875rem;
+}
+
+input:focus~.line,
+input:valid~.line {
+  width: 12.5rem;
+}
+
+/* 按钮样式 */
+button {
+  margin: 0;
+  padding: 0;
+  border: .0625rem solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.reset-btn,
+.submit-btn {
+  width: 3.75rem;
+  padding: .625rem;
+  background-color: #5264ae;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+button.disabled {
+  cursor: not-allowed;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5625rem;
+}
+
+/* 文章区域 */
+.result {
+  position: relative;
+  width: 90%;
+  height: 21.875rem;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  margin-top: 1.875rem;
+  border: 2px dotted #fff;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  line-height: 1.5;
+  text-align: left;
+  transition: 0.5s;
+  /* 识别换行符 */
+  white-space: pre-line;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.result.active {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.result .copy-btn,
+.result .recreate-btn {
+  position: absolute;
+  border-radius: .1875rem;
+  top: 1.25rem;
+  color: #fff;
+  font-size: .875rem;
+  background-color: rgba(255, 255, 255, .5);
+  padding: .3125rem;
+}
+
+.result .copy-btn {
+  right: 1.875rem;
+}
+
+.result .recreate-btn {
+  left: 1.875rem;
+}
+
+/* 加载动画 */
+.loading-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.loading-container.active {
+  opacity: 1;
+}
+
+.loading-container .text {
+  color: red;
+  margin-top: .625rem;
+  font-weight: 500;
+}
+
+.loading {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+  border-top-color: rgba(255, 0, 0, 0.2);
+  border-right-color: rgba(255, 0, 0, 0.2);
+  border-bottom-color: rgba(255, 0, 0, 0.2);
+  border-radius: 100%;
+  margin: auto;
+
+  animation: circle infinite 0.75s linear;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 提示框 */
+.tip {
+  position: fixed;
+  right: -12.5rem;
+  top: 3.125rem;
+  box-sizing: border-box;
+  width: 12.5rem;
+  padding: 1.25rem;
+  background-color: rgba(42, 40, 40);
+  border-radius: 5px;
+  color: rgb(240, 86, 86);
+  transition: 0.6s;
+  font-style: italic;
+}
+
+.tip.active {
+  right: .625rem;
+}
