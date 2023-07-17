@@ -1,0 +1,10 @@
+.menu {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  cursor: pointer;
+}
+
+.menu img {
+  width: 2.5rem;
+}

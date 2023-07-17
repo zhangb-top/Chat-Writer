@@ -8,11 +8,16 @@
   <title>Chat Writer</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/setting.css">
+  <link rel="stylesheet" href="./css/meun.css">
   <link rel="shortcut icon" href="./assets/chatgpt.jpg" type="image/x-icon">
 </head>
 
 <body>
   <h1 class="title">Chat Writer</h1>
+  <!-- 菜单 -->
+  <div class="menu">
+    <img src="./assets/menu.png">
+  </div>
   <!-- 设置 -->
   <div class="setting">
     <img src="./assets/setting.png">
@@ -30,6 +35,12 @@
         <input required autocomplete="off" type="text" id="style" class="style-ipt">
         <span class="line"></span>
         <label for="style">Article Type</label>
+      </div>
+      <!-- 论文语言 -->
+      <div class="form-item">
+        <input required autocomplete="off" type="text" id="article-language" class="article-language-ipt">
+        <span class="line"></span>
+        <label for="article-language">Article Language</label>
       </div>
       <!-- 关键词 -->
       <div class="form-item">

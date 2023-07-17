@@ -1,6 +1,6 @@
 /* 设置 apikey 的表单 */
 .setting {
-  position: fixed;
+  position: absolute;
   top: 1.25rem;
   right: 1.25rem;
 }

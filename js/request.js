@@ -3,7 +3,7 @@ const instance = axios.create({
 })
 
 // 密钥
-let apiKey = ''
+let apiKey = localStorage.getItem('apiKey')
 
 const loading = document.querySelector('.loading-container')
 

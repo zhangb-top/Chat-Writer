@@ -20,10 +20,16 @@ settingDoms.settingBtn.addEventListener('click', function () {
 
 // 点击 × 关闭输入框
 settingDoms.closeBtn.addEventListener('click', close)
+
 // 关闭函数
 function close() {
   settingDoms.formKey.classList.remove('active')
   settingDoms.body.classList.remove('mark')
+}
+
+// 保存key到本地存储中
+function saveApiKeyToLocalStorage(apiKey) {
+  localStorage.setItem('apiKey', apiKey)
 }
 
 // 点击确认
@@ -31,5 +37,6 @@ settingDoms.confirmBtn.addEventListener('click', function () {
   apiKey = settingIptDoms.apiKey.value
   close()
   if (apiKey === '') return showTip('密钥为空将无法使用')
+  saveApiKeyToLocalStorage(apiKey)
   showTip('设置成功')
 })

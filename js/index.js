@@ -2,7 +2,8 @@ const iptDoms = {
   theme: document.querySelector('.theme-ipt'),
   wordsCount: document.querySelector('.words-count-ipt'),
   keywords: document.querySelector('.keywords-ipt'),
-  style: document.querySelector('.style-ipt')
+  style: document.querySelector('.style-ipt'),
+  language: document.querySelector('#article-language')
 }
 
 const doms = {
@@ -15,13 +16,13 @@ const doms = {
   recreateBtn: document.querySelector('.recreate-btn'),
 }
 
-showTip('使用前记得添加密钥哦')
+showTip('第一次使用记得添加密钥哦')
 
 const bodyData = {
   model: "gpt-3.5-turbo",
   messages: [
     {
-      role: "assistant",
+      role: "user",
       content: ""
     }
   ],
@@ -33,7 +34,7 @@ const bodyData = {
 doms.submitBtn.addEventListener('click', async function () {
   // 判断表单项是否为空
   if (isEmpty()) return showTip('表单项不能为空')
-  bodyData.messages[0].content = `当涉及到${iptDoms.theme.value}时，我需要一篇${iptDoms.wordsCount.value}字的${iptDoms.style.value}，主题是${iptDoms.theme.value}，关键词包括${iptDoms.keywords.value}。`
+  bodyData.messages[0].content = `当涉及到${iptDoms.theme.value}时，我需要一篇${iptDoms.wordsCount.value}字的${iptDoms.style.value}，主题是${iptDoms.theme.value}，关键词包括${iptDoms.keywords.value}，请你使用${iptDoms.language.value}回答我`
   // 清空表单
   reset()
   // 生成文章
