@@ -8,3 +8,57 @@
 .menu img {
   width: 2.5rem;
 }
+
+.left-menu {
+  position: fixed;
+  top: 0;
+  left: -15.625rem;
+  width: 12.5rem;
+  height: 100vh;
+  background-color: #34495e;
+  z-index: 1;
+  transition: 0.3s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.left-menu.show {
+  left: 0;
+}
+
+.menu-item {
+  box-sizing: border-box;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  color: #fff;
+  text-align: center;
+  border-bottom: .125rem solid #fff;
+  cursor: pointer;
+  font-size: 1.125rem;
+  transition: 0.3s;
+}
+
+.menu-item.active {
+  color: #3498db;
+  background-color: #1a252f;
+}
+
+.close-menu {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: -3.125rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 2.875rem;
+  text-align: center;
+  background-color: #34495e;
+  border: .125rem solid #3498db;
+  color: #fff;
+  z-index: 1;
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.close-menu:hover {
+  background-color: #1a252f;
+}

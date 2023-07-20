@@ -1,0 +1,140 @@
+/* 整体 */
+.translate {
+  position: relative;
+  height: 80vh;
+  margin-top: 5rem;
+  margin-bottom: 1.25rem;
+  border: 2px dotted #fff;
+  color: #fff;
+}
+
+.translate.active {
+  display: flex;
+}
+
+.left-box {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-right: 2px dotted #fff;
+}
+
+.right-box {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 输入框 */
+.left-box .form-item,
+.right-box .form-item {
+  width: 6.25rem;
+  height: 2.5rem;
+  margin: 0 auto;
+}
+
+.left-box .form-item input:focus~.line,
+.left-box .form-item input:valid~.line,
+.right-box .form-item input:focus~.line,
+.right-box .form-item input:valid~.line {
+  width: 6.25rem;
+}
+
+.left-box .form-item input,
+.right-box .form-item input {
+  width: 100%;
+  height: 2.5rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.left-box .form-item input::placeholder,
+.right-box .form-item input::placeholder {
+  color: rgba(255, 255, 255, .6);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.translate-btn {
+  position: absolute;
+  top: -3.75rem;
+  width: 3.75rem;
+  padding: .625rem;
+  background-color: #5264ae;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.translate-btn.disabled {
+  cursor: not-allowed;
+}
+
+/* 文字域 */
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  background: red;
+}
+
+.left-box .word,
+.right-box .word {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 3.125rem);
+  padding: .625rem;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: scroll;
+  white-space: pre-line;
+}
+
+.right-box .word {
+  cursor: not-allowed;
+}
+
+.right-box .word.active {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* 按钮 */
+.right-box .copy-btn,
+.right-box .recreate-btn {
+  position: absolute;
+  border-radius: .1875rem;
+  top: .625rem;
+  color: #fff;
+  font-size: .875rem;
+  background-color: rgba(255, 255, 255, .5);
+  padding: .3125rem;
+}
+
+.right-box .copy-btn {
+  right: .625rem;
+}
+
+.right-box .recreate-btn {
+  left: .625rem;
+}
+
+@media screen and (max-width:750px) {
+  .ability.translate {
+    flex-direction: column;
+  }
+
+  .left-box {
+    width: 100%;
+    flex: 1;
+    border-right: 0;
+    border-bottom: 2px dotted #fff;
+  }
+
+  .right-box {
+    width: 100%;
+    flex: 1;
+  }
+}

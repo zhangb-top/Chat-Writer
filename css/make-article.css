@@ -1,0 +1,140 @@
+.make-article.active {
+  display: block;
+}
+
+/* 输入框样式 */
+.form {
+  width: 50%;
+  margin: auto;
+}
+
+.form-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-item {
+  width: 12.5rem;
+  position: relative;
+  margin: 1.5625rem .625rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0;
+  border-bottom: .125rem solid #fff;
+  font-size: 1rem;
+  background-color: #161626;
+  color: #fff;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 0;
+  border-bottom: .125rem solid #5264ae;
+  transition: 0.4s ease;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  line-height: 3.125rem;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+input:focus~label,
+input:valid~label {
+  transform: translateY(-30px);
+  font-size: .875rem;
+}
+
+input:focus~.line,
+input:valid~.line {
+  width: 12.5rem;
+}
+
+.reset-btn,
+.submit-btn {
+  width: 3.75rem;
+  padding: .625rem;
+  background-color: #5264ae;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5625rem;
+}
+
+/* 文章区域 */
+.result {
+  position: relative;
+  height: 21.875rem;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  margin: 1.875rem auto;
+  border: 2px dotted #fff;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  line-height: 1.5;
+  text-align: left;
+  transition: 0.5s;
+  /* 识别换行符 */
+  white-space: pre-line;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.result.active {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.result .copy-btn,
+.result .recreate-btn {
+  position: absolute;
+  border-radius: .1875rem;
+  top: 1.25rem;
+  color: #fff;
+  font-size: .875rem;
+  background-color: rgba(255, 255, 255, .5);
+  padding: .3125rem;
+}
+
+.result .copy-btn {
+  right: 1.875rem;
+}
+
+.result .recreate-btn {
+  left: 1.875rem;
+}
+
+@media screen and (max-width:750px) {
+  .form {
+    width: 100%;
+  }
+}
