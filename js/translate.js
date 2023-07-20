@@ -15,7 +15,7 @@ const translateData = {
   messages: [
     {
       role: "user",
-      content: `请你将：${translateIptDoms.userTextarea.value}，翻译成${translateIptDoms.processedLanguage.value}，如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
+      content: `请你将：${translateIptDoms.userTextarea.value}，翻译成${translateIptDoms.processedLanguage.value}，请你不要任意添加标点符号。如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
     }
   ],
   temperature: 0.8
@@ -27,7 +27,7 @@ const translateData = {
 for (const key in translateIptDoms) {
   if (Object.hasOwnProperty.call(translateIptDoms, key)) {
     translateIptDoms[key].addEventListener('input', function () {
-      translateData.messages[0].content = `请你将："${translateIptDoms.userTextarea.value}"，翻译成${translateIptDoms.processedLanguage.value}，如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
+      translateData.messages[0].content = `请你将：${translateIptDoms.userTextarea.value}，翻译成${translateIptDoms.processedLanguage.value}，请你不要任意添加标点符号。如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
     })
   }
 }
