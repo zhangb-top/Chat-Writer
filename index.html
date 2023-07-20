@@ -32,7 +32,7 @@
   </div>
 
   <!-- 生成文章 -->
-  <div class="ability make-article active">
+  <div class="ability make-article">
     <div class="form">
       <div class="form-items">
         <!-- 主题 -->
@@ -85,18 +85,11 @@
   </div>
 
   <!-- 翻译 -->
-  <div class="ability translate">
+  <div class="ability translate active">
     <button class="translate-btn">翻译</button>
     <div class="left-box">
-      <!-- 语种 -->
-      <div class="form-item">
-        <input value="英语" required autocomplete="off" type="text" id="initial-language" class="initial-language-ipt"
-          placeholder="Language">
-        <span class="line"></span>
-      </div>
       <!-- 文字 -->
-      <textarea class="word"
-        id="user-textarea">Chat Writer —— an editor designed specifically for text-based work.</textarea>
+      <textarea class="word" id="user-textarea"></textarea>
     </div>
     <div class="right-box">
       <!-- 按钮 -->
@@ -108,7 +101,7 @@
         <span class="line"></span>
       </div>
       <!-- 文字 -->
-      <textarea disabled class="word" id="assign-textarea">Chat Writer —— 一个专为文字类工作而生的编辑者</textarea>
+      <textarea disabled class="word" id="assign-textarea"></textarea>
       <div class="loading-container">
         <div class="loading"></div>
         <div class="text">加载中. . .</div>

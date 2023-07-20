@@ -1,5 +1,4 @@
 const translateIptDoms = {
-  initialLanguage: document.querySelector('#initial-language'),
   processedLanguage: document.querySelector('#processed-language'),
   userTextarea: document.querySelector('#user-textarea')
 }
@@ -16,7 +15,7 @@ const translateData = {
   messages: [
     {
       role: "user",
-      content: `我希望你能充当一个万能翻译的小助手，你精通各种语言的单词、语法。我将用${translateIptDoms.initialLanguage.value}与你交谈，你将把它翻译成${translateIptDoms.processedLanguage.value}。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来。你需要保持翻译后的句子意思不变。我希望你只准确无误的翻译，如果遇到不认识的单词就按照原来的文字输入，你坚决不要写任何解释。我的要翻译的内容是${translateIptDoms.userTextarea.value}`
+      content: `请你将：${translateIptDoms.userTextarea.value}，翻译成${translateIptDoms.processedLanguage.value}，如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
     }
   ],
   temperature: 0.8
@@ -28,7 +27,7 @@ const translateData = {
 for (const key in translateIptDoms) {
   if (Object.hasOwnProperty.call(translateIptDoms, key)) {
     translateIptDoms[key].addEventListener('input', function () {
-      translateData.messages[0].content = `我希望你能充当一个万能翻译的小助手，你精通各种语言的单词、语法。我将用${translateIptDoms.initialLanguage.value}与你交谈，你将把它翻译成${translateIptDoms.processedLanguage.value}。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来。你需要保持翻译后的句子意思不变。我希望你只准确无误的翻译，如果遇到不认识的单词就按照原来的文字输入，你坚决不要写任何解释。我的要翻译的内容是${translateIptDoms.userTextarea.value}`
+      translateData.messages[0].content = `请你将："${translateIptDoms.userTextarea.value}"，翻译成${translateIptDoms.processedLanguage.value}，如果遇到问句，你必须直接翻译，也不要写任何解释。如果要翻译的内容中存在地方名称等专有名词，你需要准确的把专有名词翻译出来，并且保持翻译后的句子意思不变。`
     })
   }
 }
