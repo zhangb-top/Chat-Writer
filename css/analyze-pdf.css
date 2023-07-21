@@ -70,8 +70,6 @@
   color: rgba(255, 255, 255, 0.2);
 }
 
-.analysis-result .text {}
-
 .analysis-result .copy-btn,
 .analysis-result .recreate-btn {
   position: absolute;
