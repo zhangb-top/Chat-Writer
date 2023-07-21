@@ -37,6 +37,10 @@ pdfIptDoms.file.addEventListener('change', function (event) {
  * @param {*} file 
  */
 function readPDF(file) {
+  // 隐藏按钮组
+  hidePDFBtns()
+  // 展示加载动画
+  pdfLoadingStartAnimation()
   const fileReader = new FileReader();
   fileReader.onload = async function () {
     let pdf = {}
@@ -46,6 +50,7 @@ function readPDF(file) {
     } catch (err) {
       pdfDoms.pdfName.textContent = 'Please choose a pdf file'
       showTip(err.message)
+      return
     }
     let content = ''
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {

@@ -12,9 +12,11 @@ Chat Writer是一个基于[GPT_API_free](https://github.com/chatanywhere/GPT_API
 
 全文翻译：2023-7-20，新增全文翻译效果，只需要提供文字的内容、文字的语种、要翻译成的语种。Chat Writer就可以帮你完成一份全文翻译的工作。
 
+pdf分析功能：用户可以传入一个pdf文件，Chat Writer可以为你总结全文的内容，帮助你快速了解总结该pdf文件。由于测试数据较少，欢迎个人多多尝试pdf文件，如果遇到困难可以联系我。
+
 ### 计划开发
 
-全文翻译功能、编写邮件等，让Chat Writer真正的成为各行各业的小帮手
+让Chat Writer真正的成为各行各业的小帮手
 
 ## 前提条件
 
@@ -30,11 +32,19 @@ Chat Writer是一个基于[GPT_API_free](https://github.com/chatanywhere/GPT_API
 
 > 设置密钥：点击右上方的设置按钮，填入领取的密钥即可
 
-<img src="http://cdn.zhangb.top/key.jpg" alt="key" style="zoom: 33%;" />
+<img src="http://cdn.zhangb.top/chatwriter-index.jpg" alt="chatwriter-index" style="zoom: 67%;" />
 
-<img src="http://cdn.zhangb.top/form.jpg" alt="form" style="zoom:33%;" />
+> 生成文章
 
 <img src="http://cdn.zhangb.top/article.jpg" alt="article" style="zoom:33%;" />
+
+> 翻译
+
+<img src="http://cdn.zhangb.top/chatwriter-translate.jpg" alt="chatwriter-translate" style="zoom:33%;" />
+
+> 解析pdf文件
+
+<img src="http://cdn.zhangb.top/chatwriter-pdf.jpg" alt="chatwriter-pdf" style="zoom: 33%;" />
 
 ## 在线体验
 

@@ -1,6 +1,6 @@
 .analyze-pdf {
   color: #fff;
-  margin: 1.25rem 0;
+  margin: 1.875rem 0;
 }
 
 .analyze-pdf.active {
@@ -55,7 +55,7 @@
   text-align: left;
   transition: 0.5s;
   border: 2px dotted #fff;
-  margin: 1.25rem 0;
+  margin: 1.25rem 0 0 0;
   white-space: pre-line;
   font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
