@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/meun.css">
   <link rel="stylesheet" href="./css/make-article.css">
   <link rel="stylesheet" href="./css/translate.css">
+  <link rel="stylesheet" href="./css/analyze-pdf.css">
   <link rel="shortcut icon" href="./assets/chatgpt.jpg" type="image/x-icon">
 </head>
 
@@ -20,6 +21,7 @@
   <div class="left-menu">
     <div class="menu-item active" data-index="0">Make Article</div>
     <div class="menu-item" data-index="1">Translate</div>
+    <div class="menu-item" data-index="2">Analyze PDF</div>
     <div class="close-menu">×</div>
   </div>
   <!-- 菜单按钮 -->
@@ -32,7 +34,7 @@
   </div>
 
   <!-- 生成文章 -->
-  <div class="ability make-article active">
+  <div class="ability make-article">
     <div class="form">
       <div class="form-items">
         <!-- 主题 -->
@@ -109,6 +111,26 @@
     </div>
   </div>
 
+  <!-- 解析pdf文件 -->
+  <div class="ability analyze-pdf active">
+    <!-- 上传文件 -->
+    <a href="javascript:;" class="file">
+      <img src="./assets/pdf.png" class="pdf-png">
+      <input type="file" id="file" accept=".pdf">
+      <div class="pdf-name">Please choose a pdf file</div>
+    </a>
+    <!-- 分析结果 -->
+    <div class="analysis-result">
+      <button class="copy-btn" style="display: none;">复制</button> <button class="recreate-btn"
+        style="display: none;">重新生成</button>
+      <div class="text"></div>
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div class="text">加载中. . .</div>
+      </div>
+    </div>
+  </div>
+
   <!-- 提示框 -->
   <div class="tip"></div>
   <!-- 设置 apiKey 的表单 -->
@@ -128,6 +150,8 @@
 
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+  <!-- 从 CDN 引入 pdfjs-dist -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
   <!-- 配置axios -->
   <script src="./js/request.js"></script>
   <!-- 接口 -->
@@ -135,6 +159,7 @@
   <script src="./js/index.js"></script>
   <script src="./js/make-article.js"></script>
   <script src="./js/translate.js"></script>
+  <script src="./js/analyze-pdf.js"></script>
   <script src="./js/setting.js"></script>
 </body>
 

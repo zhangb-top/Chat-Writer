@@ -90,6 +90,7 @@ textarea {
   font-size: 1.125rem;
   overflow: scroll;
   white-space: pre-line;
+  line-height: 1.5;
 }
 
 .right-box .word {

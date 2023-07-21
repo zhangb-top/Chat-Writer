@@ -1,0 +1,94 @@
+.analyze-pdf {
+  color: #fff;
+  margin: 1.25rem 0;
+}
+
+.analyze-pdf.active {
+  display: block;
+}
+
+.file {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 12.5rem;
+  text-align: center;
+  display: block;
+  background: #0b0925;
+  border: 2px dotted #1E88C7;
+  border-radius: 4px;
+  overflow: hidden;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.125rem;
+}
+
+.file .pdf-png {
+  margin: 3.125rem 0 .9375rem 0;
+  width: 3.125rem;
+}
+
+.file #file {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  border-bottom: 0;
+  z-index: 1;
+}
+
+.analysis-result {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  width: 100%;
+  height: 25rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  line-height: 1.5;
+  text-align: left;
+  transition: 0.5s;
+  border: 2px dotted #fff;
+  margin: 1.25rem 0;
+  white-space: pre-line;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.analysis-result.active {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.analysis-result.active {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.analysis-result .text {}
+
+.analysis-result .copy-btn,
+.analysis-result .recreate-btn {
+  position: absolute;
+  border-radius: .1875rem;
+  top: 1.25rem;
+  color: #fff;
+  font-size: .875rem;
+  background-color: rgba(255, 255, 255, .5);
+  padding: .3125rem;
+}
+
+.analysis-result .copy-btn {
+  right: 1.875rem;
+}
+
+.analysis-result .recreate-btn {
+  left: 1.875rem;
+}
+
+@media screen and (max-width:730px) {}

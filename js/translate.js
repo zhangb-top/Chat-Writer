@@ -11,7 +11,7 @@ const translateDoms = {
 }
 
 const translateData = {
-  model: "gpt-3.5-turbo",
+  model: "gpt-3.5-turbo-16k-0613",
   messages: [
     {
       role: "user",
@@ -63,7 +63,7 @@ async function getTranslateResult() {
     if (!res.id) return showTip('生成失败')
     // 显示翻译结果
     translateDoms.assignTextarea.value = res.choices[0].message.content
-    // 隐藏按钮组
+    // 显示按钮组
     showTranslateBtns()
   } catch {
     translateLoadingEndAnimation()
