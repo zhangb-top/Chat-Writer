@@ -62,16 +62,22 @@ function showTip(message) {
  * 复制函数
  * @param {*} dom 复制对象
  */
-function copy(dom) {
+async function copy(dom) {
   const range = document.createRange()
   range.selectNodeContents(dom)
   const selection = window.getSelection()
   selection.removeAllRanges()
   selection.addRange(range)
   try {
-    const successful = document.execCommand('copy');
-    const msg = successful ? '复制成功' : '复制失败'
-    showTip(msg)
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+      // 当前设备是移动设备
+      const successful = document.execCommand('copy');
+      const msg = successful ? '复制成功' : '复制失败'
+      showTip(msg)
+    } else {
+      await navigator.clipboard.writeText(dom.textContent)
+      showTip('复制成功')
+    }
   } catch (err) {
     showTip('复制失败')
   }
