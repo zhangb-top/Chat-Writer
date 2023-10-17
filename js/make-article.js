@@ -16,7 +16,7 @@ const articleDoms = {
 }
 
 const articleData = {
-  model: "gpt-3.5-turbo-16k-0613",
+  model: "gpt-3.5-turbo-0301",
   messages: [
     {
       role: "user",
